@@ -3,22 +3,13 @@ package org.telusko;
 
 public class Dev
 {
-    Laptop laptop;
+    private Computer com;
     int age ;
 
-    public Dev(Laptop laptop) {
-        this.laptop = laptop;
-        System.out.println("Dev Laptop parameterized constructor");
-    }
 
     public Dev()
     {
         System.out.println("Dev Constuctor");
-    }
-
-    public Dev(int age) {
-        this.age = age;
-        System.out.println("Dev Parameterized Constructor");
     }
 
     public int getAge()
@@ -31,19 +22,17 @@ public class Dev
         this.age = age;
     }
 
-    public Laptop getLaptop()
-    {
-        return laptop;
+    public Computer getComp() {
+        return com;
     }
 
-    public void setLaptop(Laptop laptop)
-    {
-        this.laptop = laptop;
+    public void setComp(Computer com) {
+        this.com = com;
     }
 
     public void build()
     {
         System.out.println("Working on Awesome Project");
-        laptop.compile();
+        com.compile();
     }
 }
